@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+           margin:5% 35%;
+        }
+        table, th , td{
+            border: 1px solid black;
+            background-color:lavender;
+            
+        } 
+        button{
+            background-color: green;
+            color: white;
+            border: none;
+            display: inline;
+            text-align: center;
+            margin: 2px 4px;
+            padding: 10px 32px;
+            cursor: pointer;
+        }
+        #display > th,td{
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+   <form name="form" >
+       <div id="getInfo">
+       <table>
+           <tr>
+               <td>Name :</td>
+               <td><input type="text" name="name" required></td>
+           </tr>
+           <tr>
+               <td>Email :</td>
+               <td><input type="email" name="email" required></td>
+           </tr>
+           <tr>
+               <td>Phone :</td>
+               <td><input type="number" name="phone" required></td>
+           </tr>
+           <tr>
+               <td>DOB :</td>
+               <td><input type="date" name="dob" required></td>
+            </tr>
+            <tr>
+                <td>Address :</td>
+                <td><textarea name="address" cols="20" rows="1" required></textarea></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button onclick="details()" >Submit</button>
+                    <button onclick="reset()" style="background-color: tomato;">Reset</button>
+                </td>
+            </tr>
+       </table>
+       </div>
+   </form> 
+
+   <div id="display">
+   <table>
+       <tr>
+           <th>Name</th>
+           <th>Email</th>
+           <th>Phone</th>
+           <th>DOB</th>
+           <th>Address</th>
+       </tr>
+       <tr id="allDetails">
+       </tr>
+   </table>
+   </div>
+</body>
+<script src="form.js"></script>
+</html>
